@@ -1,0 +1,23 @@
+{
+  "model_version": "unet_r34_v1",
+  "checkpoint_epoch": 24,
+  "test_images": 44,
+  "seed": 42,
+  "img_size": 512,
+  "threshold": 0.5,
+  "metrics": {
+    "iou": 0.8282503392639583,
+    "miou": 0.8555710628993266,
+    "dice_f1": 0.9060579084562418,
+    "precision": 0.9007005051731336,
+    "recall": 0.9114794251945659,
+    "pixel_acc": 0.9251583192427533,
+    "area_ratio_mae": 0.033738191158596116,
+    "alert_level_acc": 0.9090909090909091
+  },
+  "latency_ms": {
+    "gpu_L4_bf16": 8.086252212524414,
+    "cpu_fp32": 760.3105545043945
+  },
+  "evaluated_at": "2026-10-21T14:28:54"
+}
