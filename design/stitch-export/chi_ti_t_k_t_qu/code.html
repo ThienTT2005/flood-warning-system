@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-background":"#0b1c30","secondary-fixed":"#89f5e7","on-primary-fixed-variant":"#004b73","secondary":"#006a61","on-secondary":"#ffffff","surface-variant":"#d3e4fe","secondary-fixed-dim":"#6bd8cb","on-tertiary-fixed-variant":"#3f465c","surface":"#f8f9ff","surface-container":"#e5eeff","on-surface":"#0b1c30","surface-tint":"#006398","primary-container":"#007bb9","on-secondary-fixed":"#00201d","surface-dim":"#cbdbf5","surface-bright":"#f8f9ff","tertiary-container":"#6c748b","on-tertiary":"#ffffff","on-surface-variant":"#3f4850","inverse-on-surface":"#eaf1ff","tertiary-fixed":"#dae2fd","inverse-surface":"#213145","inverse-primary":"#93ccff","error":"#ba1a1a","on-primary-container":"#fdfcff","outline":"#707881","primary-fixed":"#cce5ff","tertiary-fixed-dim":"#bec6e0","outline-variant":"#bfc7d2","background":"#f8f9ff","on-primary":"#ffffff","on-secondary-fixed-variant":"#005049","surface-container-high":"#dce9ff","error-container":"#ffdad6","on-secondary-container":"#006f66","surface-container-highest":"#d3e4fe","on-error":"#ffffff","on-tertiary-fixed":"#131b2e","on-error-container":"#93000a","on-primary-fixed":"#001d31","tertiary":"#545c72","surface-container-lowest":"#ffffff","surface-container-low":"#eff4ff","secondary-container":"#86f2e4","on-tertiary-container":"#fefcff","primary":"#006194","primary-fixed-dim":"#93ccff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-md":"0.75rem","gutter-desktop":"1.25rem","margin-desktop":"1.5rem","space-sm":"0.5rem","margin":"1rem","gutter":"1rem","space-xl":"1.5rem","space-lg":"1rem"},"fontFamily":{"headline-md":["Be Vietnam Pro"],"headline-sm":["Be Vietnam Pro"],"body-sm":["Be Vietnam Pro"],"headline-lg":["Be Vietnam Pro"],"label-sm":["Be Vietnam Pro"],"body-md":["Be Vietnam Pro"],"label-md":["Be Vietnam Pro"],"code-num":["Be Vietnam Pro"],"body-lg":["Be Vietnam Pro"],"display-metric":["Be Vietnam Pro"]},"fontSize":{"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"code-num":["13px",{"lineHeight":"18px","fontWeight":"500"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"display-metric":["32px",{"lineHeight":"40px","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-inverse-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-14 px-margin-desktop flex items-center gap-space-sm bg-inverse-surface"><img alt="FloodGuard AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1USQf2L00fihI3y__sTlx-Z4gf3jd_uhC2oYtyKBZ2G91JsU_mTh2koaaMGZ7Ah1DRNgtxg9H4pceqHGnOSKxqrsijRc9m1GHxW15DS9XqDPR74Rub87HfFtufYeQgQDqqsZezcxhEtJWm5pf-WvHtrNnDXa5Xn5MVlijgjnkL76rTaPi5nGWozaoky_blBooLqbBqpCPCWFEDE9_BxD6Y4Gfz-dpznnfCnWU3hin9iUHwO9E652YNmLlQ"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-inverse-on-surface truncate">FloodGuard AI</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim truncate">Hệ thống cảnh báo ngập</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary text-on-primary font-label-md rounded-lg"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant/20 hover:text-inverse-on-surface transition-colors" data-path="tong-quan" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-md text-body-md">Tổng quan</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant/20 hover:text-inverse-on-surface transition-colors" data-path="phan-tich-video" href="#"><span class="material-symbols-outlined text-[20px]">video_file</span><span class="font-body-md text-body-md">Phân tích video</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant/20 hover:text-inverse-on-surface transition-colors" data-path="lich-su-phan-tich" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span class="font-body-md text-body-md">Lịch sử phân tích</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-colors bg-primary text-on-primary font-label-md rounded-lg" data-path="chi-tiet-ket-qua" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-body-md text-body-md">Chi tiết kết quả</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant/20 hover:text-inverse-on-surface transition-colors" data-path="thong-tin-mo-hinh" href="#"><span class="material-symbols-outlined text-[20px]">memory</span><span class="font-body-md text-body-md">Thông tin mô hình</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between px-space-md py-space-sm rounded-lg bg-inverse-surface/80"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span><span class="font-label-sm text-label-sm text-inverse-on-surface">Hệ thống: Trực tuyến</span></div><span class="font-code-num text-code-num text-tertiary-fixed-dim">v1.4</span></div><button class="flex items-center justify-center gap-space-sm w-full py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant/20 hover:text-inverse-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span><span class="font-label-md text-label-md">Thu gọn menu</span></button></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 w-full px-gutter-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-sm min-w-0"><span class="font-label-md text-label-md text-tertiary">Trang chủ</span><span class="font-label-md text-label-md text-outline-variant">/</span><span class="font-headline-sm text-headline-sm text-on-surface truncate">Tổng quan hệ thống</span></div><div class="flex items-center gap-space-lg"><div class="relative flex items-center w-64"><span class="material-symbols-outlined absolute left-space-md text-[18px] text-outline">search</span><input class="w-full h-9 pl-9 pr-space-md bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm font-body-sm rounded-lg outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary" placeholder="Tìm kiếm video, mã phân tích..." type="text"/></div><div class="flex items-center gap-space-xs text-tertiary font-code-num text-code-num"><span class="material-symbols-outlined text-[18px]">schedule</span><span>Thứ Năm, 24/10/2026 - 10:45:12</span></div><button aria-label="Thông báo cảnh báo" class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-full transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_ZjXuwio-Q4lkzoh7xM-JJORFIktqgLyLDVcPNPz8XKBxxWVpdIRZD4uNRHSYSnNCPBn8KfDkEbdRuscoHGG-wilj1txpc0TG0FQLiqZwbsWPdUJpHjnpFQ7VqS2XXzvCcW9X2_T3H5WdWlI8tvw1Q0QzXaJKeQYK9aJPLd-t8G7XIv0EFwH34g1fNRR1MnsCVYax2I5rqAHhuWy3VTswnpa6PI7ts4wKKnJDr1NHKtr37mM6SqMo"/><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Nguyễn Văn Minh</span><span class="font-label-sm text-label-sm text-tertiary leading-tight">Người giám sát - Ban Vận hành</span></div></div></div></div></header><main class="relative pt-14 w-full px-gutter-desktop py-margin-desktop bg-surface"><div class="flex flex-col w-full gap-space-xl">
+<!-- Top Navigation & Action Bar -->
+<section class="flex flex-col md:flex-row md:items-center justify-between gap-space-lg bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<nav class="flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary">
+<a class="hover:text-primary transition-colors" href="#">Tổng quan</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Phân tích video</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-label-md text-label-md">Chi tiết kết quả #ANL-20261022-01</span>
+</nav>
+<div class="flex items-center gap-space-md">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Kết quả phân tích chi tiết</h1>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-code-num text-code-num">#ANL-20261022-01</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Báo cáo chi tiết phát hiện ngập úng từ video <span class="font-code-num text-on-surface font-semibold">flood_test.mp4</span> qua trạm giám sát đô thị thông minh.</p>
+</div>
+<!-- Action Group -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Quay lại tổng quan</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">video_call</span>
+<span>Phân tích video khác</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Lưu kết quả (Xuất PDF/JSON)</span>
+</button>
+</div>
+</section>
+<!-- Flood Warning Banner -->
+<section class="relative overflow-hidden bg-error-container/40 p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex items-start gap-space-md">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-error text-on-error flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-md text-headline-md text-on-error-container tracking-tight">CÓ DẤU HIỆU NGẬP</span>
+<span class="px-space-sm py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm uppercase tracking-wide">Mức độ khẩn cấp</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+            Hệ thống phát hiện dấu hiệu ngập liên tục trong video dựa trên thuật toán Cửa sổ trượt Sliding Window 3/5 (đạt <span class="font-code-num font-semibold text-on-error-container">24/30 frame</span> vượt ngưỡng ngập an toàn của giao lộ).
+          </p>
+</div>
+</div>
+<!-- Comparative benchmark badge -->
+<div class="flex flex-col gap-space-xs p-space-md bg-surface-container-lowest rounded-lg shadow-sm max-w-sm">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Chuẩn tham chiếu đối chiếu</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">
+          So sánh: Nếu an toàn hệ thống sẽ hiển thị <strong class="text-secondary font-medium">KHÔNG PHÁT HIỆN NGẬP</strong> với dải nhận diện màu xanh mạ quang học.
+        </p>
+</div>
+</div>
+</section>
+<!-- Metric Summary Cards (7 KPI Grid) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-space-md">
+<!-- 1: Trạng thái -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Trạng thái</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-md bg-secondary-fixed/50 text-on-secondary-fixed font-label-md text-label-md">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Hoàn thành
+        </div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">Tiến trình 100%</span>
+</div>
+<!-- 2: Tên video -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Tên video</span>
+<span class="material-symbols-outlined text-[18px]">movie</span>
+</div>
+<div class="min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate block" title="flood_test.mp4">flood_test.mp4</span>
+<span class="font-label-sm text-label-sm text-tertiary">MP4 • 14.8 MB</span>
+</div>
+<span class="font-code-num text-label-sm text-tertiary">30 FPS • 1080p</span>
+</div>
+<!-- 3: Phiên bản mô hình -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Kiến trúc AI</span>
+<span class="material-symbols-outlined text-[18px]">memory</span>
+</div>
+<div class="min-w-0">
+<span class="font-code-num text-label-md text-label-md text-on-surface truncate block" title="unet_r34_v1+cls_r18_v1">unet_r34+cls_r18</span>
+<span class="font-label-sm text-label-sm text-tertiary">Hybrid Inference</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary">v1.4 Thử nghiệm</span>
+</div>
+<!-- 4: Tổng frame -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Tổng frame</span>
+<span class="material-symbols-outlined text-[18px]">filter_frames</span>
+</div>
+<div>
+<span class="font-display-metric text-display-metric text-on-surface">30</span>
+<span class="font-body-sm text-body-sm text-tertiary ml-1">frame</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">Thời lượng: 00:30s</span>
+</div>
+<!-- 5: Frame phát hiện ngập -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Frame ngập</span>
+<span class="material-symbols-outlined text-[18px] text-error">water_damage</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-display-metric text-display-metric text-error">24</span>
+<span class="font-label-md text-label-md text-error font-semibold">(80.0%)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-error">Vượt ngưỡng báo động</span>
+</div>
+<!-- 6: Độ tin cậy trung bình -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Độ tin cậy</span>
+<span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+</div>
+<div>
+<span class="font-display-metric text-display-metric text-primary">92,4</span>
+<span class="font-headline-sm text-headline-sm text-primary">%</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">ResNet18 Classifier</span>
+</div>
+<!-- 7: Tỷ lệ vùng ngập trung bình -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Vùng ngập TB</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">layers</span>
+</div>
+<div>
+<span class="font-display-metric text-display-metric text-secondary">66,39</span>
+<span class="font-headline-sm text-headline-sm text-secondary">%</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">U-Net Mặt nạ nước</span>
+</div>
+</section>
+<!-- Evidence Comparison Section (5 Representative Frames) -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-wide">
+<span class="material-symbols-outlined text-[18px]">troubleshoot</span>
+<span>Bằng chứng thị giác</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Bằng chứng phát hiện (5 frame tiêu biểu)</h2>
+<p class="font-body-sm text-body-sm text-tertiary">So sánh trực quan song song giữa Khung hình thực tế và Mặt nạ phân đoạn vùng ngập (U-Net Segmentation Mask).</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-2 px-space-md py-1 bg-surface-container-low rounded-lg text-tertiary font-label-sm text-label-sm">
+<span class="w-3 h-3 rounded-sm bg-secondary-fixed inline-block"></span>
+<span>Vùng nước ngập phát hiện (Cyan Mask)</span>
+</div>
+</div>
+</div>
+<!-- Comparison Cards Stack -->
+<div class="flex flex-col gap-space-lg">
+<!-- Evidence Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm pb-space-sm bg-surface-container-low/40 p-space-md rounded-lg">
+<div class="flex items-center flex-wrap gap-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-code-num text-label-md text-on-surface">Frame #05</span>
+<div class="flex items-center gap-1 text-tertiary font-code-num text-body-sm">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>Thời điểm: 00:04</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">Có ngập</span>
+<span class="text-tertiary font-body-sm text-body-sm">Độ tin cậy: <strong class="text-on-surface font-semibold">93,8%</strong></span>
+<span class="text-tertiary font-body-sm text-body-sm">Tỷ lệ diện tích: <strong class="text-secondary font-semibold">62,4%</strong></span>
+</div>
+<button class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-md text-label-md transition-colors self-start lg:self-auto" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+<span>Xem chi tiết phóng to</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Left: Original -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span class="font-medium text-on-surface">Khung hình gốc (Camera trạm 04)</span>
+<span class="font-code-num">RGB Native</span>
+</div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High quality realistic surveillance view of an urban road in Vietnam during heavy tropical rain. Deep muddy water submerging the street completely, reaching above motorbike wheels. Vehicles slowly passing through floodwater with water ripples and splashes under dull cloudy daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa8TWO_-unk0RIELBOLraq17Oy3O1CKaN6MaOsuZ9DUHSqBB5xaTQJnyli1DhBXGSygxJnMAX2zC3pVvDbthNMg-wfjwcvnL8A_nBFVm-gyOKYrxo8HSmSBCJoYGLwlEETyELqizzCqz9gHNGJ3tZu6mUEI9-nC5FEtqLprxnwpbQ86PPmBS8y-y1ikVM9T6-hzDWHfUZYj4neE7EkxtiuwHs-2wZTlE1YKhdVvX4UmC44-oZ-yu7v"/>
+<div class="absolute bottom-2 left-2 px-space-sm py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-code-num text-label-sm">
+                CAM_VN_04 - 1080p
+              </div>
+</div>
+</div>
+<!-- Right: Mask Overlaid -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span class="font-medium text-on-surface">Mask vùng ngập (U-Net AI Analysis)</span>
+<span class="text-secondary font-code-num font-semibold">Khối nước: 62.4%</span>
+</div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="AI computer vision segmentation analysis overlay of an urban flooded road. Vibrant semi-transparent glowing cyan and teal polygonal mask highlighting the precise flooded roadway boundary. Motorbike wheels submerged in highlighted water area with high contrast bounding outlines on realistic cityscape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc-NYce23GjVTW67j0OAT9XMsI9Pwvq0O-Z4YyjLqEIO-wTvS8wRvOtlIofo_nv5eQL4jwzm8acMfCyGXJii6E8mg_dhi72gadEBa_7FL-KvWSZD6X4RS_E0js8mZGT1_1qpQh3e5P6LwVUifA7FQy65WraerTZNh5HT18JH9UETPnattzlcGLDoyNavKoRG210TmGTVQB-xjJ_Ykq-0pZN7vLFi0nSylhlf2wqLudRE98LJoCTX8u"/>
+<div class="absolute top-2 right-2 px-space-sm py-0.5 rounded bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Phân đoạn: 62,4% diện tích mặt cắt</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Evidence Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm pb-space-sm bg-surface-container-low/40 p-space-md rounded-lg">
+<div class="flex items-center flex-wrap gap-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-code-num text-label-md text-on-surface">Frame #12</span>
+<div class="flex items-center gap-1 text-tertiary font-code-num text-body-sm">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>Thời điểm: 00:11</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">Có ngập</span>
+<span class="text-tertiary font-body-sm text-body-sm">Độ tin cậy: <strong class="text-on-surface font-semibold">94,5%</strong></span>
+<span class="text-tertiary font-body-sm text-body-sm">Tỷ lệ diện tích: <strong class="text-secondary font-semibold">68,1%</strong></span>
+</div>
+<button class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-md text-label-md transition-colors self-start lg:self-auto" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+<span>Xem chi tiết phóng to</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span class="font-medium text-on-surface">Khung hình gốc</span>
+<span class="font-code-num">RGB Native</span>
+</div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Surveillance view of a flooded Vietnamese intersection with rising floodwaters reaching the sidewalks. Commuters on small motorcycles struggling through muddy water that covers the street from curb to curb under overcast rainy conditions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6i8fcQh8kyeA-YFmelZmrK0TwbnpJ2ZjsWopanuFx9bQk96NPHgGEZuKEHhIV7SliRssC7VLez9B_OQlR0P__8BbSrckkjDj5_jckNyCw2URxEp8CwW3xxODjU-c8f9TqnGpLm4UoynmPZ7Y93XuPZfFGzdccSvw0dPxm0fF-WIi_jqchPZuVlJKiqtZvI74QEY-bBT0Ue0FcuGvgAu4ypUBullnhFhmwyP9-doMlbU-wz2wZuQMo"/>
+<div class="absolute bottom-2 left-2 px-space-sm py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-code-num text-label-sm">
+                CAM_VN_04 - 1080p
+              </div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span class="font-medium text-on-surface">Mask vùng ngập (U-Net AI)</span>
+<span class="text-secondary font-code-num font-semibold">Khối nước: 68.1%</span>
+</div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Deep learning water segmentation visualization with neon teal and azure transparent raster overlay completely identifying water surface boundaries across a flooded Vietnamese street intersection, accurately avoiding curbs and vehicle hulls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMfctD4wFXFDga2X2bmOmVDdTTRuM5JyqX_2P8RVvM4sL6NTIEJS-CJq4ZDHBUk3mXwftuDMQLPmmmtcsZoPefzt5Gva_c9s6Lk09oDGL551AMVkcJKGXTGiSCGzusMXiJrbqjrVV3naQy57Z74Ylq0PhzphXNzXyEhYkSTovGrKpr0V7oyw6R4sNOFKj7KiTpNHzCkvPkNl7TbSfPb9RQcGYnO0-Hpo0QlwPHbM2Krg2oF4nOpwnl"/>
+<div class="absolute top-2 right-2 px-space-sm py-0.5 rounded bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Phân đoạn: 68,1% diện tích mặt cắt</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Evidence Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm pb-space-sm bg-surface-container-low/40 p-space-md rounded-lg">
+<div class="flex items-center flex-wrap gap-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-code-num text-label-md text-on-surface">Frame #18</span>
+<div class="flex items-center gap-1 text-tertiary font-code-num text-body-sm">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>Thời điểm: 00:17</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">Có ngập</span>
+<span class="text-tertiary font-body-sm text-body-sm">Độ tin cậy: <strong class="text-on-surface font-semibold">96,2%</strong></span>
+<span class="text-tertiary font-body-sm text-body-sm">Tỷ lệ diện tích: <strong class="text-secondary font-semibold">74,5%</strong></span>
+</div>
+<button class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-md text-label-md transition-colors self-start lg:self-auto" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+<span>Xem chi tiết phóng to</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span class="font-medium text-on-surface">Khung hình gốc</span>
+<span class="font-code-num">RGB Native</span>
+</div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Severe urban flooding point during a high tide cloudburst in Vietnam. Deep brown water submerging street gutters, exhaust pipes of stranded scooters, water cresting against storefront barriers on a commercial street." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd_EexQ6yv2LRLR8HINd6IprRMQSy5Tb-U5GiYO3zxTrP_gYNruwFr55YxVrw-G44kfjh3rQE4Z88au5YUVLuV_-hnobHgP0qhFK-3C4riLEY7X8_4IMsXmGHRC2KGjBgTAps63ZKjXo_mJbNCxFqzCXZ7HBkXWrTR5JioMmBybgvbkldr5O72YuIHQotsWPMjBMVO9jRRmPLWscSCkLzRE5RF7XEzHIdWl5p8hjGVb1Ge6whU4zDe"/>
+<div class="absolute bottom-2 left-2 px-space-sm py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-code-num text-label-sm">
+                CAM_VN_04 - 1080p
+              </div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span class="font-medium text-on-surface">Mask vùng ngập (U-Net AI)</span>
+<span class="text-secondary font-code-num font-semibold">Khối nước: 74.5%</span>
+</div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Scientific computer vision output depicting maximum flood extent with a vivid luminescent cyan heat map segmentation mask sharply distinguishing the deep inundated road surface from storefront thresholds and streetlamp poles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA71q6hzTUDxJnHYyIyfmACHTETblnCMs_os_0R_lIWdgGpuSp7ZfLjetu5IC3Sc62bL91Lz3_XzqTJOuNPt-7kqwWu5yauYuFt2-QW79prN0Ms_WDiP1oLaB57bcLfdKr4quKT9Ioubti6nuq9qNOc_97kgXF3T2NFXxzDftHSXdXOeru7fmsI4ZJb1EeYBoiUmZPQetlVxWfHjySTZBrE0mdyJq-Ct-oNb4TKkxEvvLZUnKh-hhVV"/>
+<div class="absolute top-2 right-2 px-space-sm py-0.5 rounded bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Phân đoạn: 74,5% diện tích mặt cắt</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Evidence Card 4 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm pb-space-sm bg-surface-container-low/40 p-space-md rounded-lg">
+<div class="flex items-center flex-wrap gap-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-code-num text-label-md text-on-surface">Frame #24</span>
+<div class="flex items-center gap-1 text-tertiary font-code-num text-body-sm">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>Thời điểm: 00:23</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">Có ngập</span>
+<span class="text-tertiary font-body-sm text-body-sm">Độ tin cậy: <strong class="text-on-surface font-semibold">91,0%</strong></span>
+<span class="text-tertiary font-body-sm text-body-sm">Tỷ lệ diện tích: <strong class="text-secondary font-semibold">65,8%</strong></span>
+</div>
+<button class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-md text-label-md transition-colors self-start lg:self-auto" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+<span>Xem chi tiết phóng to</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span class="font-medium text-on-surface">Khung hình gốc</span>
+<span class="font-code-num">RGB Native</span>
+</div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A city street in downtown Ho Chi Minh City covered in rainwater with reflections of traffic lights and neon shop signs on the turbulent surface of the flooded asphalt road." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1LcUmDuPaF9cqTjOC1argXufmU-XOIvp2WNbyvXHjeUSihemaAGUJhh7O1TxP_3CZUUl_Y3LA1d0UMLOcbHxSWj0b0UELXh8emxOokHXIhdlvB9K8723fuk1xLhg10EtjZCiIHOR1CRNMY5AbHmI8lVFeBGWH683zAJh9e_9YcUsrkpu54n7A2BWami2T9YKJqt385wYxMIQgP9JztD2eJx5iiS3iBsIfV-rFM6weJTfEOY8sDM3e"/>
+<div class="absolute bottom-2 left-2 px-space-sm py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-code-num text-label-sm">
+                CAM_VN_04 - 1080p
+              </div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span class="font-medium text-on-surface">Mask vùng ngập (U-Net AI)</span>
+<span class="text-secondary font-code-num font-semibold">Khối nước: 65.8%</span>
+</div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Computer vision U-Net segmentation mask with glowing electric cyan layer detecting urban floodwater boundaries with edge delineation filters against dusk streetlights in a Southeast Asian metropolis." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClx8vCWjxGxPsNRnKjEJf93An5SmMx8xdQMU3MCKIStxSytBFzU8aU9jXJuiCbMp_dgLuC4RQZPDE_Xu4yUZsBlm51BHieSMrrNOag96PgGUVyUKwj8cU088ydKAqlVuOvi-0i6JrJeDL4RUGuxVtRqWwYi4fZ-LGXBncoC9wAEX_Fa7wJPUR1kTsG7k8IjviPzLEzXzZ-ePxWKMOdjYKNdxh3enFbwqWiv0hq6Ytjcts-atrUAlUH"/>
+<div class="absolute top-2 right-2 px-space-sm py-0.5 rounded bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Phân đoạn: 65,8% diện tích mặt cắt</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Evidence Card 5 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm pb-space-sm bg-surface-container-low/40 p-space-md rounded-lg">
+<div class="flex items-center flex-wrap gap-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-code-num text-label-md text-on-surface">Frame #29</span>
+<div class="flex items-center gap-1 text-tertiary font-code-num text-body-sm">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>Thời điểm: 00:28</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">Có ngập</span>
+<span class="text-tertiary font-body-sm text-body-sm">Độ tin cậy: <strong class="text-on-surface font-semibold">89,5%</strong></span>
+<span class="text-tertiary font-body-sm text-body-sm">Tỷ lệ diện tích: <strong class="text-secondary font-semibold">58,2%</strong></span>
+</div>
+<button class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-md text-label-md transition-colors self-start lg:self-auto" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+<span>Xem chi tiết phóng to</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span class="font-medium text-on-surface">Khung hình gốc</span>
+<span class="font-code-num">RGB Native</span>
+</div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Late stage floodwater receding slowly on an asphalt roadway with noticeable high water mark stains on curb walls and scattered debris left on sidewalks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDInvn6OjWeenztEe5mghgQ3B-gDnBzMaAwbdSQuhRbN-hmDM4r-EniphbRiD98LYGbhcxJ7YuzxzSX8C1LTlhLecURBVb2mu4RIVmV3EVpQzXIJTwUPEQl0E-188LMYFPwz0pmdzdTlGI1e9XqkZf4quI46Q2o--Sy6K3e0nBLqJfCsX5G6uTIImpDiOehAEDyAq0cDM-B7CNOPLbwI9L9U4IPRp9mkIogpSJhnrKri7jAkhJKGhaj"/>
+<div class="absolute bottom-2 left-2 px-space-sm py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-code-num text-label-sm">
+                CAM_VN_04 - 1080p
+              </div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span class="font-medium text-on-surface">Mask vùng ngập (U-Net AI)</span>
+<span class="text-secondary font-code-num font-semibold">Khối nước: 58.2%</span>
+</div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High precision AI model segmentation mask in translucent cyan and deep blue outlining residual standing pool waters along an urban thoroughfare with high clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6yDbmFJxx98_8maY-aCm86lECW0ZSl98FO_wXBjJzmv639jHeO19am6b8v9bSaTxx_18vffr9saOVtkHK_Lw8cG1YZU4HvTYGemN6XW2Y-6bMurrlaRN1ubzjscju7OvlwXolXEU4B7Jzt1C7p_r-yr20RTfUZzFZiPP9L0iTtlu_YBlSJHY_3ZVTbtozuzRT5TeU85kxY9kCoaciE0J2HJfkGZyK9IXHSPbFhrDlRK3XtpEL4A8Y"/>
+<div class="absolute top-2 right-2 px-space-sm py-0.5 rounded bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Phân đoạn: 58,2% diện tích mặt cắt</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Frame Log Section -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Chi tiết từng frame (Frame Log)</h3>
+<p class="font-body-sm text-body-sm text-tertiary">Danh sách đầy đủ 30 khung hình mẫu trích xuất từ video phân tích.</p>
+</div>
+<!-- Controls & Filter Pills -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<div class="inline-flex p-1 rounded-lg bg-surface-container-low">
+<button class="px-space-md py-1 rounded-md bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm" type="button">
+            Tất cả (30)
+          </button>
+<button class="px-space-md py-1 rounded-md text-tertiary hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+            Frame có ngập (24)
+          </button>
+<button class="px-space-md py-1 rounded-md text-tertiary hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+            Frame không ngập (6)
+          </button>
+</div>
+<div class="relative flex items-center w-56">
+<span class="material-symbols-outlined absolute left-space-sm text-[18px] text-outline">search</span>
+<input class="w-full h-9 pl-8 pr-space-md bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm font-body-sm rounded-lg outline-none focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest" placeholder="Tìm theo số frame..." type="text"/>
+</div>
+</div>
+</div>
+<!-- High-density Data Table -->
+<div class="overflow-x-auto rounded-lg">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-tertiary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md">Frame</th>
+<th class="py-space-sm px-space-md">Thời điểm</th>
+<th class="py-space-sm px-space-md">Kết quả</th>
+<th class="py-space-sm px-space-md text-right">Độ tin cậy</th>
+<th class="py-space-sm px-space-md text-right">Tỷ lệ vùng ngập</th>
+<th class="py-space-sm px-space-md">Phiên bản mô hình</th>
+<th class="py-space-sm px-space-md text-center">Mask</th>
+<th class="py-space-sm px-space-md text-right">Thao tác</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-sm font-body-sm">
+<!-- Row 1: Safe Frame -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md font-code-num text-on-surface font-semibold">Frame #01</td>
+<td class="py-space-sm px-space-md font-code-num text-tertiary">00:00</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Bình thường
+              </span>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-on-surface">96,8%</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-tertiary">1,2%</td>
+<td class="py-space-sm px-space-md font-code-num text-label-sm text-tertiary">unet_r34_v1+cls_r18_v1</td>
+<td class="py-space-sm px-space-md text-center">
+<span class="inline-flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">hide_image</span>
+                Không có
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="text-tertiary hover:text-primary transition-colors font-label-md text-label-md" type="button">Xem gốc</button>
+</td>
+</tr>
+<!-- Row 2: Safe Frame -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md font-code-num text-on-surface font-semibold">Frame #02</td>
+<td class="py-space-sm px-space-md font-code-num text-tertiary">00:01</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Bình thường
+              </span>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-on-surface">95,1%</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-tertiary">3,5%</td>
+<td class="py-space-sm px-space-md font-code-num text-label-sm text-tertiary">unet_r34_v1+cls_r18_v1</td>
+<td class="py-space-sm px-space-md text-center">
+<span class="inline-flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">hide_image</span>
+                Không có
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="text-tertiary hover:text-primary transition-colors font-label-md text-label-md" type="button">Xem gốc</button>
+</td>
+</tr>
+<!-- Row 3: Flooded Frame -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-error-container/10">
+<td class="py-space-sm px-space-md font-code-num text-on-surface font-semibold">Frame #05</td>
+<td class="py-space-sm px-space-md font-code-num text-tertiary">00:04</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                Ngập úng
+              </span>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-on-surface font-semibold">93,8%</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-error font-semibold">62,40%</td>
+<td class="py-space-sm px-space-md font-code-num text-label-sm text-tertiary">unet_r34_v1+cls_r18_v1</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">image</span>
+<span>Có mask</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="text-primary hover:text-primary-container transition-colors font-label-md text-label-md" type="button">Xem ảnh mask</button>
+</td>
+</tr>
+<!-- Row 4: Flooded Frame -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-error-container/10">
+<td class="py-space-sm px-space-md font-code-num text-on-surface font-semibold">Frame #12</td>
+<td class="py-space-sm px-space-md font-code-num text-tertiary">00:11</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                Ngập úng
+              </span>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-on-surface font-semibold">94,5%</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-error font-semibold">68,10%</td>
+<td class="py-space-sm px-space-md font-code-num text-label-sm text-tertiary">unet_r34_v1+cls_r18_v1</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">image</span>
+<span>Có mask</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="text-primary hover:text-primary-container transition-colors font-label-md text-label-md" type="button">Xem ảnh mask</button>
+</td>
+</tr>
+<!-- Row 5: Flooded Frame -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-error-container/10">
+<td class="py-space-sm px-space-md font-code-num text-on-surface font-semibold">Frame #18</td>
+<td class="py-space-sm px-space-md font-code-num text-tertiary">00:17</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                Ngập úng
+              </span>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-on-surface font-semibold">96,2%</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-error font-semibold">74,50%</td>
+<td class="py-space-sm px-space-md font-code-num text-label-sm text-tertiary">unet_r34_v1+cls_r18_v1</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">image</span>
+<span>Có mask</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="text-primary hover:text-primary-container transition-colors font-label-md text-label-md" type="button">Xem ảnh mask</button>
+</td>
+</tr>
+<!-- Row 6: Flooded Frame -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-error-container/10">
+<td class="py-space-sm px-space-md font-code-num text-on-surface font-semibold">Frame #24</td>
+<td class="py-space-sm px-space-md font-code-num text-tertiary">00:23</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                Ngập úng
+              </span>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-on-surface font-semibold">91,0%</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-error font-semibold">65,80%</td>
+<td class="py-space-sm px-space-md font-code-num text-label-sm text-tertiary">unet_r34_v1+cls_r18_v1</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">image</span>
+<span>Có mask</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="text-primary hover:text-primary-container transition-colors font-label-md text-label-md" type="button">Xem ảnh mask</button>
+</td>
+</tr>
+<!-- Row 7: Flooded Frame -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-error-container/10">
+<td class="py-space-sm px-space-md font-code-num text-on-surface font-semibold">Frame #29</td>
+<td class="py-space-sm px-space-md font-code-num text-tertiary">00:28</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                Ngập úng
+              </span>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-on-surface font-semibold">89,5%</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-error font-semibold">58,20%</td>
+<td class="py-space-sm px-space-md font-code-num text-label-sm text-tertiary">unet_r34_v1+cls_r18_v1</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">image</span>
+<span>Có mask</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="text-primary hover:text-primary-container transition-colors font-label-md text-label-md" type="button">Xem ảnh mask</button>
+</td>
+</tr>
+<!-- Row 8: Final Frame -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-error-container/10">
+<td class="py-space-sm px-space-md font-code-num text-on-surface font-semibold">Frame #30</td>
+<td class="py-space-sm px-space-md font-code-num text-tertiary">00:29</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                Ngập úng
+              </span>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-on-surface font-semibold">88,2%</td>
+<td class="py-space-sm px-space-md font-code-num text-right text-error font-semibold">57,10%</td>
+<td class="py-space-sm px-space-md font-code-num text-label-sm text-tertiary">unet_r34_v1+cls_r18_v1</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">image</span>
+<span>Có mask</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="text-primary hover:text-primary-container transition-colors font-label-md text-label-md" type="button">Xem ảnh mask</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination -->
+<div class="flex items-center justify-between pt-space-xs text-body-sm text-tertiary">
+<div class="font-code-num">
+        Hiển thị <span class="font-semibold text-on-surface">1 - 8</span> trên tổng số <span class="font-semibold text-on-surface">30</span> frame
+      </div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md mr-2">Trang 1 / 3</span>
+<button class="px-space-md py-1 rounded-lg bg-surface-container-low text-tertiary-fixed-dim cursor-not-allowed font-label-md text-label-md" disabled="" type="button">
+          Trước
+        </button>
+<button class="px-space-md py-1 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+          Tiếp theo
+        </button>
+</div>
+</div>
+</section>
+</div></main></div></body></html>

@@ -1,0 +1,9 @@
+import { useState } from 'react'
+import { percent, videoTime, number } from '../../utils/format'
+import { EmptyState, StatusBadge } from '../common/UI'
+export default function FrameLogTable({ logs }) {
+  const [filter, setFilter] = useState('all')
+  const rows = Array.isArray(logs) ? logs.filter(row => row && typeof row === 'object') : []
+  const filtered = rows.filter(row => filter === 'all' || (filter === 'flood' ? row.is_flood === true : row.is_flood === false))
+  return <section className="card table-card"><div className="section-heading"><div><h2>Chi tiết từng frame</h2><p>{rows.length} khung hình trong dữ liệu API trả về</p></div><label className="compact-label">Lọc frame<select value={filter} onChange={event => setFilter(event.target.value)}><option value="all">Tất cả frame</option><option value="flood">Có ngập</option><option value="safe">Không ngập</option></select></label></div>{filtered.length ? <div className="table-scroll" role="region" aria-label="Chi tiết frame" tabIndex={0}><table><thead><tr><th>STT</th><th>Frame index</th><th>Thời điểm</th><th>Kết quả</th><th>Độ tin cậy</th><th>Vùng ngập</th><th>Phiên bản mô hình</th></tr></thead><tbody>{filtered.map((row, index) => <tr key={`${row.frame_index ?? 'unknown'}-${row.timestamp_ms ?? index}`}><td>{rows.indexOf(row) + 1}</td><td>{number(row.frame_index)}</td><td>{videoTime(row.timestamp_ms)}</td><td><StatusBadge tone={row.is_flood === true ? 'danger' : row.is_flood === false ? 'safe' : 'neutral'}>{row.is_flood === true ? 'Có ngập' : row.is_flood === false ? 'Không ngập' : 'Chưa xác định'}</StatusBadge></td><td>{percent(row.confidence, true)}</td><td>{percent(row.flood_area_ratio ?? row.water_area_ratio, true)}</td><td>{row.model_version || '—'}</td></tr>)}</tbody></table></div> : <EmptyState title="Không có frame phù hợp" description="Chưa có log khung hình hoặc không có dữ liệu khớp bộ lọc." />}</section>
+}

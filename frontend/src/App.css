@@ -1,0 +1,2 @@
+/* Application styles are grouped separately from the shared design tokens. */
+@import './styles/global.css';

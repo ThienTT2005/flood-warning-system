@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-background":"#0b1c30","secondary-fixed":"#89f5e7","on-primary-fixed-variant":"#004b73","secondary":"#006a61","on-secondary":"#ffffff","surface-variant":"#d3e4fe","secondary-fixed-dim":"#6bd8cb","on-tertiary-fixed-variant":"#3f465c","surface":"#f8f9ff","surface-container":"#e5eeff","on-surface":"#0b1c30","surface-tint":"#006398","primary-container":"#007bb9","on-secondary-fixed":"#00201d","surface-dim":"#cbdbf5","surface-bright":"#f8f9ff","tertiary-container":"#6c748b","on-tertiary":"#ffffff","on-surface-variant":"#3f4850","inverse-on-surface":"#eaf1ff","tertiary-fixed":"#dae2fd","inverse-surface":"#213145","inverse-primary":"#93ccff","error":"#ba1a1a","on-primary-container":"#fdfcff","outline":"#707881","primary-fixed":"#cce5ff","tertiary-fixed-dim":"#bec6e0","outline-variant":"#bfc7d2","background":"#f8f9ff","on-primary":"#ffffff","on-secondary-fixed-variant":"#005049","surface-container-high":"#dce9ff","error-container":"#ffdad6","on-secondary-container":"#006f66","surface-container-highest":"#d3e4fe","on-error":"#ffffff","on-tertiary-fixed":"#131b2e","on-error-container":"#93000a","on-primary-fixed":"#001d31","tertiary":"#545c72","surface-container-lowest":"#ffffff","surface-container-low":"#eff4ff","secondary-container":"#86f2e4","on-tertiary-container":"#fefcff","primary":"#006194","primary-fixed-dim":"#93ccff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-md":"0.75rem","gutter-desktop":"1.25rem","margin-desktop":"1.5rem","space-sm":"0.5rem","margin":"1rem","gutter":"1rem","space-xl":"1.5rem","space-lg":"1rem"},"fontFamily":{"headline-md":["Be Vietnam Pro"],"headline-sm":["Be Vietnam Pro"],"body-sm":["Be Vietnam Pro"],"headline-lg":["Be Vietnam Pro"],"label-sm":["Be Vietnam Pro"],"body-md":["Be Vietnam Pro"],"label-md":["Be Vietnam Pro"],"code-num":["Be Vietnam Pro"],"body-lg":["Be Vietnam Pro"],"display-metric":["Be Vietnam Pro"]},"fontSize":{"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"code-num":["13px",{"lineHeight":"18px","fontWeight":"500"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"display-metric":["32px",{"lineHeight":"40px","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-inverse-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-14 px-margin-desktop flex items-center gap-space-sm bg-inverse-surface"><img alt="FloodGuard AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1USQf2L00fihI3y__sTlx-Z4gf3jd_uhC2oYtyKBZ2G91JsU_mTh2koaaMGZ7Ah1DRNgtxg9H4pceqHGnOSKxqrsijRc9m1GHxW15DS9XqDPR74Rub87HfFtufYeQgQDqqsZezcxhEtJWm5pf-WvHtrNnDXa5Xn5MVlijgjnkL76rTaPi5nGWozaoky_blBooLqbBqpCPCWFEDE9_BxD6Y4Gfz-dpznnfCnWU3hin9iUHwO9E652YNmLlQ"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-inverse-on-surface truncate">FloodGuard AI</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim truncate">Hệ thống cảnh báo ngập</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary text-on-primary font-label-md rounded-lg"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant/20 hover:text-inverse-on-surface transition-colors" data-path="tong-quan" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-md text-body-md">Tổng quan</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant/20 hover:text-inverse-on-surface transition-colors" data-path="phan-tich-video" href="#"><span class="material-symbols-outlined text-[20px]">video_file</span><span class="font-body-md text-body-md">Phân tích video</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant/20 hover:text-inverse-on-surface transition-colors" data-path="lich-su-phan-tich" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span class="font-body-md text-body-md">Lịch sử phân tích</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant/20 hover:text-inverse-on-surface transition-colors" data-path="chi-tiet-ket-qua" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-body-md text-body-md">Chi tiết kết quả</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-colors bg-primary text-on-primary font-label-md rounded-lg" data-path="thong-tin-mo-hinh" href="#"><span class="material-symbols-outlined text-[20px]">memory</span><span class="font-body-md text-body-md">Thông tin mô hình</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between px-space-md py-space-sm rounded-lg bg-inverse-surface/80"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span><span class="font-label-sm text-label-sm text-inverse-on-surface">Hệ thống: Trực tuyến</span></div><span class="font-code-num text-code-num text-tertiary-fixed-dim">v1.4</span></div><button class="flex items-center justify-center gap-space-sm w-full py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant/20 hover:text-inverse-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span><span class="font-label-md text-label-md">Thu gọn menu</span></button></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 w-full px-gutter-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-sm min-w-0"><span class="font-label-md text-label-md text-tertiary">Trang chủ</span><span class="font-label-md text-label-md text-outline-variant">/</span><span class="font-headline-sm text-headline-sm text-on-surface truncate">Tổng quan hệ thống</span></div><div class="flex items-center gap-space-lg"><div class="relative flex items-center w-64"><span class="material-symbols-outlined absolute left-space-md text-[18px] text-outline">search</span><input class="w-full h-9 pl-9 pr-space-md bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm font-body-sm rounded-lg outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary" placeholder="Tìm kiếm video, mã phân tích..." type="text"/></div><div class="flex items-center gap-space-xs text-tertiary font-code-num text-code-num"><span class="material-symbols-outlined text-[18px]">schedule</span><span>Thứ Năm, 24/10/2026 - 10:45:12</span></div><button aria-label="Thông báo cảnh báo" class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-full transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_ZjXuwio-Q4lkzoh7xM-JJORFIktqgLyLDVcPNPz8XKBxxWVpdIRZD4uNRHSYSnNCPBn8KfDkEbdRuscoHGG-wilj1txpc0TG0FQLiqZwbsWPdUJpHjnpFQ7VqS2XXzvCcW9X2_T3H5WdWlI8tvw1Q0QzXaJKeQYK9aJPLd-t8G7XIv0EFwH34g1fNRR1MnsCVYax2I5rqAHhuWy3VTswnpa6PI7ts4wKKnJDr1NHKtr37mM6SqMo"/><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Nguyễn Văn Minh</span><span class="font-label-sm text-label-sm text-tertiary leading-tight">Người giám sát - Ban Vận hành</span></div></div></div></div></header><main class="relative pt-14 w-full px-gutter-desktop py-margin-desktop bg-surface"><div class="flex flex-col w-full gap-y-space-xl">
+<!-- PAGE HEADER & KPI MINI-STRIP -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="font-label-md text-label-md">Trang chủ</span>
+<span class="font-label-md text-label-md text-outline-variant">/</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Thông tin mô hình AI</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Thông tin mô hình AI &amp; Quy trình xử lý
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Kiến trúc mạng nơ-ron nhân tạo và quy tắc thuật toán phát hiện ngập úng tự động phục vụ giám sát đô thị 24/7.
+      </p>
+</div>
+<!-- Quick Ops Info Pill -->
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-lg py-space-sm rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface">Môi trường suy luận: TensorRT INT8</span>
+</div>
+<span class="text-outline-variant font-label-md">|</span>
+<div class="flex items-center gap-space-xs text-tertiary font-code-num text-code-num">
+<span class="material-symbols-outlined text-[16px] text-primary">speed</span>
+<span>Latency: ~42ms/frame</span>
+</div>
+</div>
+</div>
+<!-- SECTION 1: TWO MODEL CARDS -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter-desktop">
+<!-- MODEL CARD 1: ResNet18 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xl flex flex-col justify-between transition-all duration-200 hover:shadow-md">
+<div class="flex flex-col gap-space-md">
+<!-- Top Badges Row -->
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-sm">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-space-sm py-1 rounded">
+              Mô hình phân loại
+            </span>
+<span class="font-code-num text-code-num text-tertiary bg-surface-container-low px-space-xs py-0.5 rounded">
+              cls_r18_v1
+            </span>
+</div>
+<div class="flex items-center gap-1.5 bg-secondary/10 px-space-sm py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Đang hoạt động (Online)</span>
+</div>
+</div>
+<!-- Title & Purpose -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">grid_view</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">ResNet18 (Residual Network 18 layers)</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+<span class="font-semibold text-on-surface">Mục đích:</span> Phân loại từng khung hình độc lập để xác định trạng thái có ngập nước hoặc không ngập nước theo thời gian thực.
+          </p>
+</div>
+<!-- Architecture Specs Grid -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Thông số kỹ thuật Deep Learning</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Kích thước đầu vào (Input):</span>
+<span class="font-code-num text-code-num text-on-surface font-semibold">224 × 224 RGB Image</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Hàm kích hoạt &amp; Hàm mất mát:</span>
+<span class="font-code-num text-code-num text-on-surface font-semibold">Softmax / Cross-Entropy</span>
+</div>
+<div class="flex flex-col sm:col-span-2">
+<span class="font-label-sm text-label-sm text-tertiary">Trọng số tiền huấn luyện (Weights):</span>
+<span class="font-body-sm text-body-sm text-on-surface">ImageNet fine-tuned trên Urban Flood Dataset (Vietnam Cam Data: 42,000 ảnh)</span>
+</div>
+</div>
+</div>
+<!-- Accuracy Metric Panel -->
+<div class="flex items-center justify-between bg-surface-container-high/60 p-space-md rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Độ chính xác kiểm thử (Accuracy)</span>
+<span class="font-display-metric text-display-metric text-primary">94.2%</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">▲ +2.4% so với phiên bản tiền nhiệm</span>
+</div>
+<!-- Sparkline Chart SVG -->
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-tertiary mb-1">Kiểm định F1-Score (6 Fold)</span>
+<svg class="w-36 h-10 text-primary" fill="none" viewbox="0 0 144 40">
+<path d="M0 32 L24 28 L48 30 L72 16 L96 18 L120 8 L144 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<circle cx="144" cy="10" fill="currentColor" r="3"></circle>
+</svg>
+<span class="font-code-num text-label-sm text-outline mt-1">mAP: 0.931</span>
+</div>
+</div>
+</div>
+<!-- Card Footer: Output Description -->
+<div class="mt-space-lg pt-space-md bg-surface-container px-space-md py-space-sm rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">output</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase">Định dạng đầu ra (Output):</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">
+            Nhãn nhị phân <code class="font-code-num text-primary font-semibold">[0: Khô ráo, 1: Ngập]</code> kèm Điểm tin cậy (Confidence Score %).
+          </span>
+</div>
+</div>
+</div>
+<!-- MODEL CARD 2: U-Net ResNet34 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xl flex flex-col justify-between transition-all duration-200 hover:shadow-md">
+<div class="flex flex-col gap-space-md">
+<!-- Top Badges Row -->
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-sm">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-space-sm py-1 rounded">
+              Mô hình phân đoạn vùng ngập
+            </span>
+<span class="font-code-num text-code-num text-tertiary bg-surface-container-low px-space-xs py-0.5 rounded">
+              unet_r34_v1
+            </span>
+</div>
+<div class="flex items-center gap-1.5 bg-secondary/10 px-space-sm py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Đang hoạt động (Online)</span>
+</div>
+</div>
+<!-- Title & Purpose -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">layers</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">U-Net với Backbone ResNet34</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+<span class="font-semibold text-on-surface">Mục đích:</span> Phân đoạn ngữ nghĩa mức pixel (Pixel-level Segmentation) và tính toán chính xác tỷ lệ diện tích ngập trên tổng bề mặt giao thông.
+          </p>
+</div>
+<!-- Architecture Specs Grid -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Thông số kỹ thuật Deep Learning</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Kiến trúc giải phẫu:</span>
+<span class="font-code-num text-code-num text-on-surface font-semibold">Encoder ResNet34 + U-Net Skips</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Kích thước đầu vào (Input):</span>
+<span class="font-code-num text-code-num text-on-surface font-semibold">512 × 512 RGB Resolution</span>
+</div>
+<div class="flex flex-col sm:col-span-2">
+<span class="font-label-sm text-label-sm text-tertiary">Phương pháp phân giải:</span>
+<span class="font-body-sm text-body-sm text-on-surface">Bi-linear Interpolation Decoder với Attention Gates loại bỏ nhiễu phản xạ ánh sáng mặt đường</span>
+</div>
+</div>
+</div>
+<!-- Segmentation Metrics Dual Panel -->
+<div class="grid grid-cols-2 gap-space-md">
+<div class="bg-surface-container-high/60 p-space-md rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Mean IoU (Giao diện chuẩn)</span>
+<span class="font-display-metric text-display-metric text-secondary">78.6%</span>
+<span class="font-label-sm text-label-sm text-tertiary">Ngưỡng tối ưu trắc địa</span>
+</div>
+<div class="bg-surface-container-high/60 p-space-md rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Dice Similarity Score</span>
+<span class="font-display-metric text-display-metric text-secondary">86.4%</span>
+<span class="font-label-sm text-label-sm text-tertiary">Độ tương quan hình thái</span>
+</div>
+</div>
+</div>
+<!-- Card Footer: Output Description -->
+<div class="mt-space-lg pt-space-md bg-surface-container px-space-md py-space-sm rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">photo_filter</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase">Định dạng đầu ra (Output):</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">
+            Mặt nạ nhị phân <code class="font-code-num text-secondary font-semibold">Binary Mask [0, 255]</code> và Tỷ lệ ngập mặt đường (% diện tích).
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: PROCESSING PIPELINE DIAGRAM -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">account_tree</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Sơ đồ luồng phân tích (Processing Pipeline)</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Quy trình khép kín tự động từ luồng video thô đến kích hoạt cảnh báo theo thời gian thực
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start sm:self-auto">
+<span class="px-space-sm py-1 bg-surface-container font-code-num text-label-sm text-tertiary rounded">Batch Size: 1 stream</span>
+<span class="px-space-sm py-1 bg-primary/10 font-label-sm text-label-sm text-primary font-semibold rounded">Tuần tự &amp; Khép kín</span>
+</div>
+</div>
+<!-- Pipeline Flow Container (Horizontal on Desktop, Vertical with Connectors on Mobile) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-space-md relative pt-2">
+<!-- Step 1 -->
+<div class="relative bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-num text-label-sm text-primary font-bold">BƯỚC 01</span>
+<span class="material-symbols-outlined text-primary text-[20px]">movie</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Video MP4</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Đầu vào từ tệp tải lên hoặc luồng RTSP camera giao thông đô thị.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs font-code-num text-label-sm text-tertiary">
+          Format: .mp4 (H.264)
+        </div>
+<!-- Right Arrow Icon for wide screens -->
+<div class="hidden xl:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full bg-surface-container-highest items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-num text-label-sm text-primary font-bold">BƯỚC 02</span>
+<span class="material-symbols-outlined text-primary text-[20px]">filter_center_focus</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">OpenCV lấy frame</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Trích xuất tốc độ 1 frame/giây, khử nhiễu và chuẩn hóa ma trận điểm ảnh.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs font-code-num text-label-sm text-tertiary">
+          Rate: 1 FPS sampling
+        </div>
+<div class="hidden xl:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full bg-surface-container-highest items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-num text-label-sm text-primary font-bold">BƯỚC 03</span>
+<span class="material-symbols-outlined text-primary text-[20px]">model_training</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">ResNet18 phân loại</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Đánh giá xác suất và phân loại nhị phân độc lập cho từng frame trích xuất.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs font-code-num text-label-sm text-tertiary">
+          Threshold: ≥ 80.0%
+        </div>
+<div class="hidden xl:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full bg-surface-container-highest items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-num text-label-sm text-secondary font-bold">BƯỚC 04</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">crop_free</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">U-Net tạo mask</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Phân đoạn mặt nạ vùng ngập (Segmentation Mask) và tính % diện tích mặt đường.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs font-code-num text-label-sm text-tertiary">
+          Mask Map: 512×512
+        </div>
+<div class="hidden xl:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full bg-surface-container-highest items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="relative bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-num text-label-sm text-primary font-bold">BƯỚC 05</span>
+<span class="material-symbols-outlined text-primary text-[20px]">view_timeline</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Sliding Window 3/5</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Kiểm định trượt chuỗi thời gian: Yêu cầu tối thiểu 3 trong 5 frame liên tiếp dương tính.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs font-code-num text-label-sm text-tertiary">
+          Bộ lọc chống báo động ảo
+        </div>
+<div class="hidden xl:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full bg-surface-container-highest items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+</div>
+<!-- Step 6 -->
+<div class="relative bg-primary text-on-primary p-space-md rounded-xl flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-num text-label-sm text-on-primary/80 font-bold">BƯỚC 06</span>
+<span class="material-symbols-outlined text-on-primary text-[20px]">verified</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary mt-1">Kết luận cuối cùng</h3>
+<p class="font-body-sm text-body-sm text-on-primary/90">
+            Xác lập kết quả phân tích chuẩn hóa toàn trình cho hệ thống quản lý giao thông.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex flex-col gap-1">
+<span class="bg-surface-container-lowest/20 px-space-xs py-0.5 rounded font-label-sm text-label-sm text-on-primary font-semibold text-center truncate">
+            CÓ DẤU HIỆU NGẬP
+          </span>
+<span class="bg-surface-container-lowest/10 px-space-xs py-0.5 rounded font-label-sm text-label-sm text-on-primary/80 text-center truncate">
+            KHÔNG PHÁT HIỆN NGẬP
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: CONFIGURATION SUMMARY & PARAMETERS -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xl flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">tune</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Thông số cấu hình hệ thống (Operational Rules)</h2>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-surface-container-low px-space-sm py-1 rounded">
+        Cấu hình chuẩn hóa v1.4.2 (Locked)
+      </span>
+</div>
+<!-- Parameter Table with Tight Spacing & Crisp Contrast -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-tertiary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md rounded-l-lg font-semibold">Tên thông số cấu hình</th>
+<th class="py-space-sm px-space-md font-semibold">Thuật ngữ hệ thống</th>
+<th class="py-space-sm px-space-md font-semibold text-right">Giá trị thiết lập</th>
+<th class="py-space-sm px-space-md rounded-r-lg font-semibold">Mục đích kiểm soát</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm text-on-surface">
+<!-- Param 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md font-semibold text-on-surface">
+              1. Tần suất lấy mẫu frame
+            </td>
+<td class="py-3 px-space-md font-code-num text-code-num text-tertiary">
+              Frame sampling
+            </td>
+<td class="py-3 px-space-md font-code-num text-code-num font-bold text-primary text-right">
+              1 frame / giây
+            </td>
+<td class="py-3 px-space-md text-on-surface-variant">
+              Tối ưu hóa tài nguyên tính toán GPU mà vẫn đảm bảo tính liên tục của biến động mặt nước.
+            </td>
+</tr>
+<!-- Param 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md font-semibold text-on-surface">
+              2. Kích thước cửa sổ trượt
+            </td>
+<td class="py-3 px-space-md font-code-num text-code-num text-tertiary">
+              Sliding-window size
+            </td>
+<td class="py-3 px-space-md font-code-num text-code-num font-bold text-primary text-right">
+              5 frames
+            </td>
+<td class="py-3 px-space-md text-on-surface-variant">
+              Khung thời gian quan sát trượt cục bộ tương đương chu kỳ 5 giây liên tiếp.
+            </td>
+</tr>
+<!-- Param 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md font-semibold text-on-surface">
+              3. Ngưỡng frame dương tính
+            </td>
+<td class="py-3 px-space-md font-code-num text-code-num text-tertiary">
+              Positive-frame requirement
+            </td>
+<td class="py-3 px-space-md font-code-num text-code-num font-bold text-error text-right">
+              Tối thiểu 3 / 5 frames (60%)
+            </td>
+<td class="py-3 px-space-md text-on-surface-variant">
+              Triệt tiêu các biến động ngẫu nhiên như bóng xe chạy ngang, lá cây che khuất hoặc lóe sáng camera.
+            </td>
+</tr>
+<!-- Param 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md font-semibold text-on-surface">
+              4. Giới hạn bằng chứng lưu trữ
+            </td>
+<td class="py-3 px-space-md font-code-num text-code-num text-tertiary">
+              Evidence limit
+            </td>
+<td class="py-3 px-space-md font-code-num text-code-num font-bold text-primary text-right">
+              Tối đa 5 frames tiêu biểu
+            </td>
+<td class="py-3 px-space-md text-on-surface-variant">
+              Tự động lưu trữ ảnh chụp trích xuất có chỉ số ngập cao nhất phục vụ hồ sơ xác minh ca trực.
+            </td>
+</tr>
+<!-- Param 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md font-semibold text-on-surface">
+              5. Định dạng video hỗ trợ
+            </td>
+<td class="py-3 px-space-md font-code-num text-code-num text-tertiary">
+              Supported format
+            </td>
+<td class="py-3 px-space-md font-code-num text-code-num font-bold text-on-surface text-right">
+              MP4 (MPEG-4 Part 14)
+            </td>
+<td class="py-3 px-space-md text-on-surface-variant">
+              Chuẩn mã hóa thông dụng H.264/AVC tương thích hoàn toàn với hạ tầng camera giám sát IOC.
+            </td>
+</tr>
+<!-- Param 6 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md font-semibold text-on-surface">
+              6. Ngưỡng độ tin cậy chấp nhận
+            </td>
+<td class="py-3 px-space-md font-code-num text-code-num text-tertiary">
+              Confidence threshold
+            </td>
+<td class="py-3 px-space-md font-code-num text-code-num font-bold text-secondary text-right">
+              ≥ 80.0%
+            </td>
+<td class="py-3 px-space-md text-on-surface-variant">
+              Chỉ các khung hình đạt độ tin cậy từ 80% trở lên mới được hệ thống tính là kết quả dương tính.
+            </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- SECTION 4: OFFICIAL WARNING & DISCLAIMER BANNER -->
+<div class="bg-surface-container-high rounded-xl p-space-lg flex items-start gap-space-lg shadow-sm">
+<div class="w-10 h-10 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Lưu ý pháp lý và nguyên tắc vận hành</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<span class="font-semibold text-error">“Kết quả AI chỉ phục vụ hỗ trợ giám sát và không thay thế đánh giá thực tế của cơ quan chuyên môn.”</span> 
+        Mọi quyết định điều phối cứu hộ, đóng mở cống ngăn triều hoặc phân luồng giao thông khẩn cấp trên toàn đô thị bắt buộc phải được thẩm định trực tiếp bởi nhân viên ca trực thuộc Ban Chỉ huy Phòng chống thiên tai &amp; Tìm kiếm cứu nạn.
+      </p>
+<div class="flex items-center gap-space-md mt-space-xs text-tertiary font-label-sm text-label-sm">
+<span>Quy chuẩn tuân thủ: QCVN 08-MT:2023/BTNMT</span>
+<span>•</span>
+<span>Phê duyệt bởi Hội đồng Khoa học Kỹ thuật IOC</span>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
