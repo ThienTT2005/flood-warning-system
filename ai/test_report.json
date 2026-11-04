@@ -1,0 +1,92 @@
+[
+  {
+    "test": "Load model trên CPU",
+    "pass": true,
+    "detail": "4.5s, seg_segformer_b2_v1+cls_siglip_lp_v1"
+  },
+  {
+    "test": "SigLIP có sẵn cục bộ (chạy không cần internet)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "test": "Đủ trường output (SRS 5.3)",
+    "pass": true,
+    "detail": "['confidence', 'flood_area_ratio', 'is_flood', 'mask', 'model_version', 'water_area_ratio']"
+  },
+  {
+    "test": "Kiểu dữ liệu đúng",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "test": "confidence trong [0, 1]",
+    "pass": true,
+    "detail": "0.0098"
+  },
+  {
+    "test": "flood_area_ratio trong [0, 1]",
+    "pass": true,
+    "detail": "0.0"
+  },
+  {
+    "test": "mask cùng kích thước frame, uint8, chỉ 0/255",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "test": "is_flood=False thì area = 0 và mask rỗng",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "test": "Kết quả tất định (2 lần như nhau)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "test": "return_mask=False thì không trả mask",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "test": "Chạy được với video dọc 1080x1920",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "test": "Chạy được với frame 4K",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "test": "Chạy được với ảnh rất nhỏ 160x120",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "test": "Chạy được với ảnh xám 1 kênh",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "test": "Chạy được với ảnh 4 kênh",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "test": "Báo ValueError với frame None",
+    "pass": true,
+    "detail": "frame_bgr rỗng hoặc không phải ảnh numpy (frame hỏng)"
+  },
+  {
+    "test": "Báo ValueError với frame mảng rỗng",
+    "pass": true,
+    "detail": "frame_bgr rỗng hoặc không phải ảnh numpy (frame hỏng)"
+  },
+  {
+    "test": "Latency CPU < 1000 ms/frame (kịp 1 frame/giây)",
+    "pass": false,
+    "detail": "3014 ms/frame, 12 core"
+  }
+]
